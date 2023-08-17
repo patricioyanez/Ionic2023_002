@@ -8,12 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'uno',
     pathMatch: 'full'
   },
   {
     path: 'dos',
     loadChildren: () => import('./dos/dos.module').then( m => m.DosPageModule)
+  },
+  {
+    path: 'uno',
+    loadChildren: () => import('./uno/uno.module').then( m => m.UnoPageModule)
   },
 ];
 

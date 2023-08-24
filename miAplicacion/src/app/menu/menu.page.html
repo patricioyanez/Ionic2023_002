@@ -8,11 +8,28 @@
   <ion-list>
     <ion-list-header>
       <ion-label>Menú Principal</ion-label>
-    </ion-list-header>2
+    </ion-list-header>
   <ion-item>
     <ion-button [routerLink]="['/uno']" >
       Ver Botones
     </ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button [routerLink]="['/dos']" expand="block" shape="round">
+      Estructura de una página
+    </ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button [routerLink]="['/tres']"><!-- https://ionic.io/ionicons -->
+      <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+      Ver Input
+    </ion-button>
+  </ion-item>
+  <ion-item>
+    <a href="/cuatro">Card</a>
+  </ion-item>
+  <ion-item>
+    <a href="/cinco">Alertas</a>
   </ion-item>
   </ion-list>
 </ion-content>

@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cinco</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button id="mostrarAlerta">
+    <ion-icon slot="icon-only" name="alert"></ion-icon>
+    Alerta
+  </ion-button>
+  <ion-alert trigger="mostrarAlerta"
+              header="Ejemplo de Alerta"
+              subHeader="SubTitulo"
+              message="Este es un ejemplo de una alerta"
+              [buttons]="['Aceptar']">
+  </ion-alert>
+  <br>
+  <ion-button (click)="alerta()" expand="block" shape="round">
+    Alerta 2
+  </ion-button>
+
+
+  <ion-button (click)="incrementar()">
+    <ion-icon slot="icon-only" name="add"></ion-icon>
+  </ion-button>
+  <br>
+  <label>Click realizados: {{ valor }} </label>
+</ion-content>

@@ -10,8 +10,8 @@ export class SeisPage implements OnInit {
   apellido: string;
   mensaje : string = "Estudiante con buen desempeño";
 
-  mostrarDatos : Boolean = false;
-  asignatura = [
+  mostrarDatos : Boolean = true;
+  asignaturas = [
     {nombre:"Base de datos" , nota:39.55},
     {nombre:"Programación"  , nota:45},
     {nombre:"Matématica"    , nota:33}, 

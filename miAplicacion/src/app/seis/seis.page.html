@@ -28,6 +28,21 @@
     </ion-row>
   </ion-grid>
 
+  <ion-text color="primary" *ngIf="mostrarDatos; else noPermitido">
+    <h1 class="ion-text-center">Listado de asignaturas</h1>
+
+    <ion-item *ngFor="let asignatura of asignaturas">
+      <ion-label>{{ asignatura.nombre}}</ion-label>
+      <ion-label>{{ asignatura.nota}}</ion-label>
+    </ion-item>
+
+  </ion-text>
+
+  <ng-template #noPermitido>
+    <ion-text color="danger" class="ion-text-center">
+      <h1>No tiene permiso para ver las asignaturas del estudiante</h1>
+    </ion-text>
+  </ng-template>
 
 </ion-content>
 

@@ -24,5 +24,8 @@ export class SeisPage implements OnInit {
 
   ngOnInit() {
   }
-
+  verAsignatura()
+  {
+    this.mostrarDatos = !this.mostrarDatos;  
+  }
 }

@@ -26,14 +26,24 @@
       <ion-col size="3">Mensaje</ion-col>
       <ion-col size="9">{{ mensaje }}</ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="verAsignatura()">
+          <ion-icon name="eye-outline" *ngIf="!mostrarDatos"></ion-icon>
+          <ion-icon name="eye-off-outline" *ngIf="mostrarDatos"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
   <ion-text color="primary" *ngIf="mostrarDatos; else noPermitido">
     <h1 class="ion-text-center">Listado de asignaturas</h1>
 
     <ion-item *ngFor="let asignatura of asignaturas">
-      <ion-label>{{ asignatura.nombre}}</ion-label>
-      <ion-label>{{ asignatura.nota}}</ion-label>
+      <!-- https://angular.io/guide/pipes lowercase/uppercase -->
+      <ion-label>{{ asignatura.nombre | titlecase }}</ion-label>
+      <ion-label>{{ asignatura.nombre | slice:0:6 }}</ion-label>
+      <ion-label>{{ asignatura.nota | number:'1.0-0' }}</ion-label>
     </ion-item>
 
   </ion-text>

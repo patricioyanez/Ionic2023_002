@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seis.page.scss'],
 })
 export class SeisPage implements OnInit {
+  nombre  : string;
+  apellido: string;
+  mensaje : string = "Estudiante con buen desempeño";
 
-  constructor() { }
+  constructor() {
+    this.nombre= "Ana";
+    this.apellido="Perez";
+   }
 
   ngOnInit() {
   }

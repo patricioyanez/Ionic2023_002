@@ -51,9 +51,13 @@ export class SietePage implements OnInit {
       const toast = await this.toastController.create({
         message:'No se puede dividir por cero' ,
         duration: 3000,
-        position:"top" // top, middle
+        position:"middle" // top, middle
       });
       await toast.present();
     }
   }
+   // Ejercicios:
+  // crear una nueva pagina que permita calculador el promedio de 3 notas,
+  // mostrar si aprobó o no, según resultado obtenido.
+  // usar alert si reprueba y toast si aprueba.
 }

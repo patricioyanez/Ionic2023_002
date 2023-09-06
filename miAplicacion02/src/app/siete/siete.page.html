@@ -40,9 +40,35 @@
   <br>
   <ion-label *ngIf="resultado">El resultado es: {{resultado}}</ion-label>
   <br>
-  <ion-button (click)="sumar()" expend="block">
-    <ion-icon slot="icon-only" name="add-outline"></ion-icon>
-  </ion-button>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="sumar()" expand="block" size="large">
+          <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="restar()" expand="block" size="large" color="warning">
+          <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="6">
+        <ion-button (click)="dividir()" expand="block" size="small" color="danger">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button (click)="multiplicar()" expand="block" size="small" color="success">
+          <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <h1>Crear las operaciones aritmeticas *,/ y -, validando</h1>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">

@@ -33,4 +33,27 @@ export class SietePage implements OnInit {
     });
     await toast.present(); // despliega el mensaje
   }
+  async restar()
+  {
+    this.resultado = Number(this.n1) - Number(this.n2);
+  }
+  async multiplicar()
+  {
+    this.resultado = Number(this.n1) * Number(this.n2);
+  }
+  async dividir()
+  {
+    if(Number(this.n2) != 0)
+      this.resultado = Number(this.n1) / Number(this.n2);
+    else
+    {
+      this.n1 = this.n2 = this.resultado = "";
+      const toast = await this.toastController.create({
+        message:'No se puede dividir por cero' ,
+        duration: 3000,
+        position:"top" // top, middle
+      });
+      await toast.present();
+    }
+  }
 }

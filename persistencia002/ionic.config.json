@@ -1,0 +1,7 @@
+{
+  "name": "persistencia002",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

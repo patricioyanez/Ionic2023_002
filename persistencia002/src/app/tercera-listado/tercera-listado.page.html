@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>terceraListado</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let persona of personas" [routerLink]="['/detalle/' + persona.id]">
+    <ion-avatar slot="start">
+      <img [src]="persona.foto" />
+    </ion-avatar>
+    <ion-label>{{persona.nombre}}</ion-label>
+  </ion-item>
+
+  <h1>TAREA: crear la pagina de detalleta mostrando toda la info de la persona</h1>
+</ion-content>

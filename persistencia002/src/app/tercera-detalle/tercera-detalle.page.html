@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="tercera-listado"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img src="{{persona.foto}}" alt="">
+    <ion-card-header>
+      <ion-card-subtitle>Nombre de usuario</ion-card-subtitle>
+      <ion-card-title>{{persona.nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      edad: {{persona.edad}}
+    </ion-card-content>
+  </ion-card>
+
+  Ejercicio:
+  Agregar 2 botones para hacer match o no. Usar toast por si o alert por no
+</ion-content>

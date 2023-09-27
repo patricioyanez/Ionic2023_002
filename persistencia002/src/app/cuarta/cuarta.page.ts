@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-// instalar: npm install @ionic/storage-angular
-// en app.module import { IonicStorageModule } from '@ionic/storage-angular'; 
+
 
 @Component({
   selector: 'app-cuarta',
@@ -20,6 +19,6 @@ export class CuartaPage implements OnInit {
   async agregar()
   {
     //await this.storage.set("1","hola");
-    await this.storage.set(this.id,this.nombre);
+    await this.storage.set("1","hola");
   }
 }

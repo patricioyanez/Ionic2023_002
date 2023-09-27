@@ -8,7 +8,8 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['./cuarta.page.scss'],
 })
 export class CuartaPage implements OnInit {
-
+  id:string='';
+  nombre:string='';
   constructor(private storage: Storage) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class CuartaPage implements OnInit {
 
   async agregar()
   {
-    await this.storage.set("1","hola");
+    //await this.storage.set("1","hola");
+    await this.storage.set(this.id,this.nombre);
   }
 }

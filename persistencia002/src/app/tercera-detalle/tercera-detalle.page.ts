@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 
@@ -34,7 +34,8 @@ export class TerceraDetallePage implements OnInit {
   persona: any;
   constructor(private activatedRoute:ActivatedRoute,
               private alert: AlertController,
-              private toast: ToastController
+              private toast: ToastController,
+              private router: Router
     ) { 
 
   }
@@ -47,9 +48,23 @@ export class TerceraDetallePage implements OnInit {
   }
   async si()
   {
+    const t = await this.toast.create({
+      message   : "Realizó un MATCH",
+      icon      : "checkmark-circle-outline",
+      duration  : 3000,
+      color     : 'success'
+    });
+    t.present();
   }
   async no()
   {
-
+    const a = await this.alert.create({
+      header    : "Atención",
+      subHeader : "No Match",
+      message   : "Ud no realizó Match",
+      buttons   : ['Aceptar']
+    });
+    a.present();
+    this.router.navigateByUrl('/tercera-listado');
   }
 }

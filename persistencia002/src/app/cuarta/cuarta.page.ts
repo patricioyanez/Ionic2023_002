@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-
+// instalar: npm install @ionic/storage-angular
+// en app.module import { IonicStorageModule } from '@ionic/storage-angular'; 
 
 @Component({
   selector: 'app-cuarta',

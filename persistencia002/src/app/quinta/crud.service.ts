@@ -32,7 +32,7 @@ export class CrudService {
 
   async listar()
   {
-    let listado = [];
+    let listado:any = [];
     await this.storage.forEach((v,k) => {listado.push(v);});
     return listado;
   }

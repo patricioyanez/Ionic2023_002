@@ -69,9 +69,7 @@ export class QuintaPage implements OnInit {
       this.mensajeError("Falta rut");
     else
     {
-      console.log(this.persona.rut);
       this.crud.leer(this.persona.rut).then(x => {this.persona = x;});
-      console.log(this.persona);
     }
   }
 }

@@ -42,9 +42,13 @@
     <ion-fab-button (click)="agregar()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
 
     <!-- Ejercicios: TErminar el crud para los datos de persona -->
+    <ion-fab-button (click)="buscar()"><ion-icon name="search-outline">Buscar</ion-icon></ion-fab-button>
     <ion-fab-button><ion-icon name="list-outline">Listar</ion-icon></ion-fab-button>
-    <ion-fab-button><ion-icon name="list-outline">Modificar por rut</ion-icon></ion-fab-button>
-    <ion-fab-button><ion-icon name="list-outline">Eliminar</ion-icon></ion-fab-button>
+    <ion-fab-button><ion-icon name="pencil-outline">Modificar por rut</ion-icon></ion-fab-button>
+    <ion-fab-button><ion-icon name="remove-circle-outline">Eliminar</ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="top">
+    <ion-fab-button><ion-icon name="trash-outline"></ion-icon></ion-fab-button>
   </ion-fab-list>
 </ion-fab>
 </ion-content>

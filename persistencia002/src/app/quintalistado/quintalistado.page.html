@@ -10,7 +10,7 @@
 <ion-content [fullscreen]="true">
   <h1>Ejercicio 5</h1>
   <h2>agregar click para ver todos los datos en la pagina quinta</h2>
-  <h1 *ngIf="!personas">No hay registros</h1>
+  <h1 *ngIf="!personas.length">No hay registros</h1>
   <ion-list *ngFor="let persona of personas">
     <ion-item  >
       <ion-label>{{persona.rut}}</ion-label>

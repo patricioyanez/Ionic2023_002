@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<h1>Ejercicio: </h1>
+<h1 class="hTitulo">Ejercicio: </h1>
 <h4>Crear formulario que permita guardar: rut, nombre, dirección, correo, telefono, año nacimiento</h4>
 <ion-item>
   <ion-label position="floating">Rut</ion-label>
@@ -39,13 +39,12 @@
 <ion-fab vertical="bottom" horizontal="end">
   <ion-fab-button><ion-icon name="menu"></ion-icon></ion-fab-button>
   <ion-fab-list side="start">
-    <ion-fab-button (click)="agregar()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
-
+    <ion-fab-button (click)="guardar()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
     <!-- Ejercicios: TErminar el crud para los datos de persona -->
     <ion-fab-button (click)="buscar()"><ion-icon name="search-outline">Buscar</ion-icon></ion-fab-button>
-    <ion-fab-button (click)="agregar()"><ion-icon name="pencil-outline">Modificar por rut</ion-icon></ion-fab-button>
+    <ion-fab-button (click)="guardar()"><ion-icon name="pencil-outline">Modificar por rut</ion-icon></ion-fab-button>
     <ion-fab-button (click)="eliminar()"><ion-icon name="remove-circle-outline">Eliminar</ion-icon></ion-fab-button>
-    <ion-fab-button><ion-icon name="list-outline">Listar</ion-icon></ion-fab-button>
+    <ion-fab-button (click)="listar()"><ion-icon name="list-outline">Listar</ion-icon></ion-fab-button>
   </ion-fab-list>
   <ion-fab-list side="top">
     <ion-fab-button (click)="limpiar()"><ion-icon name="trash-outline"></ion-icon></ion-fab-button>

@@ -1,23 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from './crud.service';
 import { ToastController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quinta',
   templateUrl: './quinta.page.html',
-  styleUrls: ['./quinta.page.scss'],
+  styleUrls: ['./quinta.page.scss', '../app.component.scss'],
 })
 export class QuintaPage implements OnInit {
   //rut:any;
   persona:any =[];
   constructor(private crud: CrudService,
-    private toast: ToastController) { }
+    private toast: ToastController,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
-  async agregar()
+  async guardar()
   {
     // Ejercicio 1: Validar todos los datos  antes de guardar
     // usar TOAST rojo error y verde guardado.
@@ -98,5 +99,9 @@ export class QuintaPage implements OnInit {
   async limpiar()
   {
     this.persona = [];
+  }
+  listar()
+  {
+    this.router.navigateByUrl('/quintalistado');
   }
 }

@@ -40,14 +40,7 @@ export class QuintaPage implements OnInit {
     {
       this.crud.guardar(this.persona.rut, this.persona);
       this.persona = [];
-      const t = await this.toast.create({
-        message     : 'Guardado con éxito',
-        icon        : 'checkmark-circle-outline',
-        duration    : 3000,
-        color       : 'success',
-        position    : 'middle'
-      });
-      t.present();
+      this.mensajeExito('Datos guardados');
     }
   }
   
@@ -63,13 +56,47 @@ export class QuintaPage implements OnInit {
     });
     t.present();
   }
+  async mensajeExito(mensaje: string)
+  {
+    const t = await this.toast.create({
+      message     : mensaje,
+      icon        : 'checkmark-circle-outline',
+      duration    : 3000,
+      color       : 'success',
+      position    : 'middle'
+    });
+    t.present();
+  }
+
   async buscar()
   {
     if(!this.persona.rut)
       this.mensajeError("Falta rut");
     else
     {
-      this.crud.leer(this.persona.rut).then(x => {this.persona = x;});
+      await this.crud.leer(this.persona.rut).
+      then(x => {this.persona = x;})
+        
+      if(!this.persona)
+      {
+        this.mensajeError('Rut no encontrado');
+        this.persona = [];
+      }
     }
+  }
+  async eliminar()
+  {
+    if(!this.persona.rut)
+      this.mensajeError("Falta rut");
+    else
+    {
+      this.crud.eliminar(this.persona.rut);
+      this.mensajeExito('Solicitud realizada');
+      this.persona = [];
+    }
+  }
+  async limpiar()
+  {
+    this.persona = [];
   }
 }

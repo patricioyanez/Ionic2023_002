@@ -22,7 +22,9 @@ export class CrudService {
 
   async leer(rut: string)
   {
-    return await this.storage.get(rut);
+
+      return await this.storage.get(rut);
+
   }
 
   async eliminar(rut: string)

@@ -12,7 +12,7 @@ export class SextaPage implements OnInit {
 
   ngOnInit() {  }
   /*
-    Ejercicio: Desplegar los datos en la pagina
+    Ejercicio 15: Desplegar los datos en la pagina
   */
  async listar()
  {
@@ -20,4 +20,7 @@ export class SextaPage implements OnInit {
    this.usuarios = this.api.listado;
 
  }
+   /*
+    Ejercicio 16: Desplegar los post del usuario seleccionado
+  */
 }

@@ -5,27 +5,16 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiRestService {
-  private apiURL:string = 'https://jsonplaceholder.typicode.com/';
-  listado = [];  
+  private urlAPI:string = 'https://jsonplaceholder.typicode.com/';
+  listado :any= [];  
 
   constructor(private http: HttpClient) { }
 
   getUsers()
   {
-    this.listado = [];
-
-    let url = this.apiURL + 'users';
-    return new Promise((resolve, reject) => {
-      this.http.get(url).subscribe((data) => {
-        //data.forEach(item => {this.listado.push(item);})
-        //console.table(this.listado);
-        console.table(data);
-        return data;
-      },
-      err => {
-        console.log("Ocurrio un error");
-      })
-    })
+    const url = this.urlAPI + 'users';
+    return this.http.get(url).subscribe((a=[]) => {
+      this.listado = a; 
+    });
   }
-
 }

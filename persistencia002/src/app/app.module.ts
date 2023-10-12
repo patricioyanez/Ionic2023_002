@@ -13,12 +13,12 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 
 // 1.- permite realizar solicitudes a una api
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 // 2.- agregar a imports HttpClientModule,
 @NgModule({
   declarations: [AppComponent],
   imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot() ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [HttpClient,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -7,13 +7,17 @@ import { ApiRestService } from './api-rest.service';
   styleUrls: ['./sexta.page.scss'],
 })
 export class SextaPage implements OnInit {
-
+  usuarios :any= [];  
   constructor(private api:ApiRestService) { }
 
-  ngOnInit() {
-    this.api.getUsers();
-  }
+  ngOnInit() {  }
   /*
     Ejercicio: Desplegar los datos en la pagina
   */
+ async listar()
+ {
+   await this.api.getUsers();
+   this.usuarios = this.api.listado;
+
+ }
 }

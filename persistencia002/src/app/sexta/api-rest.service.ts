@@ -22,6 +22,7 @@ export class ApiRestService {
     const url = this.urlAPI + 'users/' + id + '/posts';
     return this.http.get(url).subscribe((a=[]) => {
       this.listado = a; 
+//      console.table(this.listado);
     });
   }
 }

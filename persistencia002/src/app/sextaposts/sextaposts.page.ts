@@ -9,19 +9,26 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SextapostsPage implements OnInit {
   posts : any = [];
+  id:string ='';
   constructor(private api: ApiRestService,
-              private activated: ActivatedRoute) { }
+              private activated: ActivatedRoute) { 
+
+    this.activated.paramMap.subscribe(p => {
+      this.id = p.get('id')??'';
+//      console.log('a' + this.id);
+    })
+              }
 
   ngOnInit() {
-    this.activated.paramMap.subscribe(p => {
-      let idUsuario = p.get('id')??'';
-      this.listar(idUsuario);
-    })
+    this.listar();
+//    console.log('c');
   }
-  async listar(idUsuario:string)
+  async listar()
   {
-    await this.api.getUserPosts(idUsuario);
+    this.api.getUserPosts(this.id);
     this.posts = this.api.listado;
 
+//    console.log('b');
+    console.table(this.api.listado);
   }
 }

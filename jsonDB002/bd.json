@@ -1,0 +1,18 @@
+{
+    "mensajes":
+    [
+        {"id": 1, "asunto": "ejemplo json-server", "usuarioId": 1},
+        {"id": 2, "asunto": "ejemplo json-server 2", "usuarioId": 1},
+        {"id": 3, "asunto": "ejemplo json-server", "usuarioId": 2},
+        {"id": 4, "asunto": "ejemplo json-server 2", "usuarioId": 2},
+        {"id": 5, "asunto": "ejemplo json-server", "usuarioId": 3}
+    ],
+    "comentario":
+    [
+        {"id": 1, "mensajesId": 1, "comentario": "exxxelente pregunta 1" },
+        {"id": 2, "mensajesId": 2, "comentario": "exxxelente pregunta 2" },
+        {"id": 3, "mensajesId": 2, "comentario": "exxxelente pregunta 3" },
+        {"id": 4, "mensajesId": 3, "comentario": "exxxelente pregunta 4" }
+    ]
+
+}

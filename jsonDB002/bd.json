@@ -1,4 +1,10 @@
 {
+    "usuario":
+    [
+        {"id": 1, "nombre": "juan", "apellido": "Díaz", "activo": 1},
+        {"id": 2, "nombre": "juana", "apellido": "Adam", "activo": 1},
+        {"id": 3, "nombre": "ana", "apellido": "Arce", "activo": 1}
+    ],
     "mensajes":
     [
         {"id": 1, "asunto": "ejemplo json-server", "usuarioId": 1},

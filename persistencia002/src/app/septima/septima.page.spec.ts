@@ -45,4 +45,25 @@ describe('********** Pruebas en Septima Página',() =>
   it('dividir: divisor es cero', ()=>{
     expect(component.dividir(10,0)).toBeUndefined();
   })
+  it('multiplicar: 2 numeros positivos', ()=>{
+    expect(component.multiplicar(2,2)).toEqual(4);
+  })
+  it('multiplicar: 1 numero es cero', ()=>{
+    expect(component.multiplicar(0,2)).toEqual(0);
+  })
+  it('multiplicar: 1 numero es negativo', ()=>{
+    expect(component.multiplicar(-9,2)).toBeLessThanOrEqual(0);
+  })
+  it('multiplicar: 2 numeros negativo', ()=>{
+    expect(component.multiplicar(-10,-2)).toBeGreaterThanOrEqual(0);
+  })
+  it('restar: 2 numeros +', ()=>{
+    expect(component.restar(5,3)).toBeGreaterThanOrEqual(0);
+  })
+  it('restar: 1er numero mayor +', ()=>{
+    expect(component.restar(5,-3)).toBeGreaterThanOrEqual(0);
+  })
+  it('restar: 2 numero neg', ()=>{
+    expect(component.restar(-5,-3)).toBeGreaterThanOrEqual(-2);
+  })
 })

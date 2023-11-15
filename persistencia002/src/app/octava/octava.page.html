@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>octava</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+Número 1<input type="number" id="n1" [(ngModel)]="n1"><br>
+Número 2<input type="number" id="n2" [(ngModel)]="n2"><br>
+<ion-button (click)="sumar()" id="btnSumar">Sumar</ion-button>
+Resultado<input type="number" id="res" [(ngModel)]="res" ><br>
+
+</ion-content>
